@@ -7,5 +7,7 @@ This is the Frontend Layer of the Web-App where the uploaded images from the API
 3. setup your env file
 4. run `php artisan key:generate`
 5. run `php artisan migrate:fresh`
-6. run `php artisan serve`
-7. enjoy
+6. run `npm install`
+7. run `php artisan serve`
+8. run `npm build dev` or `npm run watch` to compile all the assets including a source map in the project 
+9. enjoy
