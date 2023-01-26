@@ -10,3 +10,15 @@
         }
     }
 }
+
+@media screen and (max-width: 425px) {
+    .section-images {
+        .part-card-wrapper {
+            .image-wrapper {
+                min-height: 200px;
+                min-width: 200px;
+            }
+            margin: 10px;
+        }
+    }
+}

@@ -1785,6 +1785,11 @@ button.swiper-pagination-bullet {
   width: 100%;
 }
 
+section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
 .full-all {
   width: 100%;
   height: 100%;
@@ -1817,11 +1822,20 @@ button.swiper-pagination-bullet {
 }
 .section-header ul {
   list-style: none;
+  padding: 0;
 }
 .section-header ul li {
   margin: 10px;
 }
 
+@media screen and (max-width: 425px) {
+  .section-header {
+    padding: 0;
+  }
+  .section-header ul li h2 {
+    font-size: 32px !important;
+  }
+}
 .section-images .part-card-wrapper .image-wrapper {
   min-height: 500px;
   min-width: 500px;
@@ -1831,6 +1845,15 @@ button.swiper-pagination-bullet {
      object-fit: cover;
 }
 
+@media screen and (max-width: 425px) {
+  .section-images .part-card-wrapper {
+    margin: 10px;
+  }
+  .section-images .part-card-wrapper .image-wrapper {
+    min-height: 200px;
+    min-width: 200px;
+  }
+}
 .login-grid .login {
   display: grid;
   place-content: center;

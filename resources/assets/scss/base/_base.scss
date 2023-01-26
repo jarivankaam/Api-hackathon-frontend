@@ -3,6 +3,10 @@
 @import './flex/flex_classes';
 @import './text/text_classes';
 @import './utilities/utilities';
+section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
 
 .full-all {
     width: 100%;
