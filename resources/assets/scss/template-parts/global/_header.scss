@@ -2,10 +2,30 @@
     padding: 0 16px;
     color: #f1f1f1;
     background-color: $maincolor;
+    z-index: 5;
+    max-height: 75px;
+
+    ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+            margin: 10px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 425px) {
+    .section-header {
+        padding: 0;
         ul {
-            list-style: none;
             li {
-                margin: 10px;
+                h2 {
+                    font-size: 32px !important;
+                }
+
             }
         }
+    }
 }

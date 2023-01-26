@@ -1,14 +1,22 @@
 @import './vars/vars';
 @import './grid_system/grid_system';
-
-
-
 @import './flex/flex_classes';
 @import './text/text_classes';
 @import './utilities/utilities';
+section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.full-all {
+    width: 100%;
+  height: 100%;
+}
 
 .content {
     padding: 16px;
+    position: relative;
+    z-index: 1;
 
 }
 
