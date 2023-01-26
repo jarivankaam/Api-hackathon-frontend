@@ -37,19 +37,16 @@ class ImageController extends Controller
      */
     public function store(Request $request)
     {
-
-        $path = Storage::putFile('images', $request->image);
-        $url = Storage::url($path);
-
-
         $request->validate([
-            'image' => 'required',
+            'image' => 'required|mimes:png,jpg,jpeg,svg',
         ]);
 
+        $image = $request->file('image');
 
-            $request->validate([
-                'image' => 'mimes:png,jpg,jpeg,svg'
-            ]);
+        // POST to http://imgapi.azerapi.xyz/api/image as multipart/form-data
+        $response = Http::attach('image', file_get_contents($image), $image->getClientOriginalName())
+            ->post('http://imgapi.azerapi.xyz/api/image');
+
 
         return redirect()->route('home');
     }

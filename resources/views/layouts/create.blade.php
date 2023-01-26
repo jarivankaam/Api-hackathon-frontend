@@ -24,6 +24,7 @@
         <li><a href="/dashboard">dashboard</a></li>
     </ul>
 </div>
-@yield('content')
+<section class="flex justify-content-center align-items-center">@yield('content')</section>
+
 </body>
 </html>
