@@ -36,7 +36,20 @@ class ImageController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'image' => 'required',
+        ]);
+
+        if($request->hasFile('image'))
+        {
+            $request->validate([
+                'image' => 'mimes:png,jpg,jpeg,svg'
+            ]);
+
+            Http::post("http://imgapi.azerapi.xyz/api/image?filename={$request->image}");
+        }
+
+        return redirect()->route('home');
     }
 
     /**

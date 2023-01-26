@@ -13,7 +13,9 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', [ImageController::class, 'index']);
+Route::get('/', [ImageController::class, 'index'])->name('home');
+Route::get('/image/add', [ImageController::class, 'create']);
+Route::post('/upload', [ImageController::class, 'store']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');

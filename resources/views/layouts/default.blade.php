@@ -19,6 +19,7 @@
     <div class="section-header flex justify-content-center align-items-center" id="myHeader">
         <ul class="flex justify-content-around align-items-center">
             <li><a href="/">Home</a></li>
+            <li><a href="/image/add">Add Image</a></li>
             <li><h2 class="font Size64 family title">ImageApi</h2></li>
             <li><a href="/dashboard">dashboard</a></li>
         </ul>
