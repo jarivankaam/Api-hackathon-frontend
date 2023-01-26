@@ -1785,8 +1785,15 @@ button.swiper-pagination-bullet {
   width: 100%;
 }
 
+.full-all {
+  width: 100%;
+  height: 100%;
+}
+
 .content {
   padding: 16px;
+  position: relative;
+  z-index: 1;
 }
 
 /* The sticky class is added to the header with JS when it reaches its scroll position */
@@ -1805,10 +1812,44 @@ button.swiper-pagination-bullet {
   padding: 0 16px;
   color: #f1f1f1;
   background-color: rgb(154, 243, 154);
+  z-index: 5;
+  max-height: 75px;
 }
 .section-header ul {
   list-style: none;
 }
 .section-header ul li {
   margin: 10px;
+}
+
+.section-images .part-card-wrapper .image-wrapper {
+  min-height: 500px;
+  min-width: 500px;
+}
+.section-images .part-card-wrapper .image-wrapper img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.login-grid .login {
+  display: grid;
+  place-content: center;
+}
+.login-grid .login-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-information {
+  padding-bottom: 100px;
+  padding-top: 100px;
+}
+.section-information .image-wrapper {
+  max-height: 500px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.section-information .content-wrapper {
+  max-width: 650px;
 }

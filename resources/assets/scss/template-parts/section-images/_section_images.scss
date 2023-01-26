@@ -1,0 +1,12 @@
+.section-images {
+    .part-card-wrapper {
+        .image-wrapper {
+            min-height: 500px;
+            min-width: 500px;
+            img {
+                object-fit: cover;
+
+            }
+        }
+    }
+}
