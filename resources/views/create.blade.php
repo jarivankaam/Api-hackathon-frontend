@@ -1,4 +1,4 @@
-@extends('layouts.default')
+@extends('layouts.create')
 
 @section('content')
     <div class="container">
@@ -13,4 +13,4 @@
             </div>
         </div>
     </div>
-@stop
+@endsection

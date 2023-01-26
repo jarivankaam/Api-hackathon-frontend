@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Storage;
 
 class ImageController extends Controller
 {
@@ -32,22 +33,23 @@ class ImageController extends Controller
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @return string
      */
     public function store(Request $request)
     {
+
+        $path = Storage::putFile('images', $request->image);
+        $url = Storage::url($path);
+
+
         $request->validate([
             'image' => 'required',
         ]);
 
-        if($request->hasFile('image'))
-        {
+
             $request->validate([
                 'image' => 'mimes:png,jpg,jpeg,svg'
             ]);
-
-            Http::post("http://imgapi.azerapi.xyz/api/image?filename={$request->image}");
-        }
 
         return redirect()->route('home');
     }
