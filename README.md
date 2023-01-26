@@ -1,9 +1,11 @@
-Curio Hackathon 26-01-2023 - API
-This is the Frontend where images can be displayed from the API (Backend) Directory: https://github.com/jarivankaam/api-hachakthon
+# Curio Hackathon 26-01-2023 - API
+This is the Frontend Layer of the Web-App where the uploaded images from the API will be displayed, etc: https://github.com/jarivankaam/api-hachakthon
 
-How to make this project work?
-Open directory the Terminal in the: Api-hackanthon-frontend directory
-composer install
-Copy .env.example and rename the copy to .env
-php artisan generate:key
-php artisan serve
+## How to make this project work?
+1. open a terminal
+2. cd to your target dir
+3. setup your env file
+4. run `php artisan key:generate`
+5. run `php artisan migrate:fresh`
+6. run `php artisan serve`
+7. enjoy
